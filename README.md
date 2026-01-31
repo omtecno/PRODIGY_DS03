@@ -2,7 +2,7 @@
 🎯 Project Overview
 
 A complete Machine Learning Pipeline to predict whether a bank customer will subscribe to a Term Deposit using a Decision Tree Classifier.
-This project applies EDA, Data Preprocessing, Feature Engineering, and Model Evaluation on the UCI Bank Marketing Dataset.
+This project applies Exploratory Data Analysis (EDA), Data Preprocessing, Feature Engineering, and Model Evaluation on the UCI Bank Marketing Dataset.
 
 📊 Dataset Information
 Attribute	Details
@@ -12,7 +12,7 @@ Total Records	45,211 Clients
 Features	16 Input + 1 Target
 Target Variable	y (Term Deposit Subscription)
 Positive Rate	11.7% (Imbalanced Dataset)
-Key Features
+🔑 Key Features
 
 age
 
@@ -56,7 +56,7 @@ Feature type analysis (Categorical vs Numerical)
 Step	Action
 Encoding	LabelEncoder for categorical columns
 Target Mapping	no → 0, yes → 1
-Outlier Removal	IQR on duration
+Outlier Removal	IQR Method on duration
 Feature Cleaning	Removed unnecessary columns
 3️⃣ Model Training
 DecisionTreeClassifier(
@@ -70,16 +70,16 @@ DecisionTreeClassifier(
 4️⃣ Model Evaluation
 Metric	Score
 Test Accuracy	89.2%
-ROC-AUC	0.91
+ROC–AUC	0.91
 Precision (Yes)	0.58
 Recall (Yes)	0.52
 5️⃣ Visualization Suite
 Visualization	Purpose
-Target Distribution	Class imbalance view
-Age & Job Distribution	Demographic analysis
+Target Distribution	Class imbalance analysis
+Age & Job Distribution	Demographic insights
 Duration & Campaign Boxplots	Outlier detection
 Feature Importance	Key predictors
-Confusion Matrix	Prediction accuracy
+Confusion Matrix	Model accuracy evaluation
 Correlation Heatmap	Feature relationships
 Decision Tree Structure	Model interpretability
 🔍 Key Findings
@@ -105,10 +105,10 @@ Quick Start
 git clone https://github.com/YOUR_USERNAME/PRODIGY_DS_03.git
 cd PRODIGY_DS_03
 
-# 2. Launch Jupyter
+# 2. Launch Jupyter Notebook
 jupyter notebook
 
-# 3. Open Notebook
+# 3. Open Notebook and Run All Cells
 Bank_Marketing_Decision_Tree.ipynb
 
 📁 Project Structure
@@ -119,3 +119,28 @@ PRODIGY_DS_03/
 ├── model.pkl
 ├── README.md
 └── images/
+
+📌 Future Improvements
+Enhancement	Benefit
+SMOTE	Handle class imbalance
+Random Forest	Higher accuracy
+XGBoost	Better generalization
+Hyperparameter Tuning	Optimize performance
+Feature Scaling	Improve stability
+👨‍💻 Author
+
+Your Name
+
+⭐ Repository Stats
+
+Stars: 0
+
+Forks: 0
+
+Watchers: 0
+
+📜 License
+
+This project is open-source and available under the MIT License.
+
+This version is clean, recruiter-friendly, and GitHub professio
