@@ -1,64 +1,27 @@
-🏦 PRODIGY_DS_03: Bank Marketing – Decision Tree Classifier
+🏦 PRODIGY_DS_03: Bank Marketing - Decision Tree Classifier
 🎯 Project Overview
-
-A complete Machine Learning Pipeline to predict whether a bank customer will subscribe to a Term Deposit using a Decision Tree Classifier.
-This project applies Exploratory Data Analysis (EDA), Data Preprocessing, Feature Engineering, and Model Evaluation on the UCI Bank Marketing Dataset.
+Comprehensive machine learning pipeline to predict customer purchase behavior using Decision Tree Classifier on the UCI Bank Marketing dataset for Portuguese bank term deposit campaigns.
 
 📊 Dataset Information
-Attribute	Details
-Source	UCI Machine Learning Repository
-Dataset Name	Bank Marketing Dataset
-Total Records	45,211 Clients
-Features	16 Input + 1 Target
-Target Variable	y (Term Deposit Subscription)
-Positive Rate	11.7% (Imbalanced Dataset)
-🔑 Key Features
-
-age
-
-job
-
-marital
-
-education
-
-duration
-
-campaign
-
-pdays
-
-poutcome
-
+Source: Prodigy InfoTech / UCI Bank Marketing Dataset
+Records: 45,211 bank clients
+Original Features: 16 demographic/behavioral + 1 target (y)
+Key Features: age, job, marital, education, duration, campaign, pdays, poutcome
+Target: y (no/yes term deposit subscription) - 11.7% positive rate
 🛠️ Tools & Technologies
-Tool / Library	Purpose
-Python 3.9+	Programming Language
-Pandas	Data Manipulation
-NumPy	Numerical Computation
-Scikit-learn	Machine Learning
-Matplotlib	Visualization
-Seaborn	Statistical Plots
-Jupyter Notebook	Development Environment
-ucimlrepo	Dataset Fetching
-joblib	Model Saving
+Python 3.9+, pandas, NumPy scikit-learn (DecisionTreeClassifier) matplotlib, seaborn, Jupyter Notebook ucimlrepo, joblib
+
 📋 Methodology
-1️⃣ Data Loading & Exploration
-
-Loaded dataset (45,211 × 17)
-
-Checked missing & duplicate values
-
-Identified Severe Class Imbalance
-
-Feature type analysis (Categorical vs Numerical)
-
-2️⃣ Data Preprocessing
-Step	Action
-Encoding	LabelEncoder for categorical columns
-Target Mapping	no → 0, yes → 1
-Outlier Removal	IQR Method on duration
-Feature Cleaning	Removed unnecessary columns
-3️⃣ Model Training
+1. Data Loading & Initial Exploration
+Loaded UCI dataset (45,211 × 17 features)
+Identified severe class imbalance (88.3% No, 11.7% Yes)
+Analyzed 10 categorical + 7 numerical features
+2. Data Preprocessing
+Categorical Encoding: LabelEncoder on job, marital, education, contact, month, day, poutcome
+Target Encoding: y → {no:0, yes:1}
+Outlier Removal: Duration IQR method
+Result: Clean dataset ready for modeling
+3. Model Training
 DecisionTreeClassifier(
     criterion='gini',
     max_depth=10,
@@ -66,81 +29,31 @@ DecisionTreeClassifier(
     min_samples_leaf=10,
     random_state=42
 )
+###4. Model Evaluation Test Accuracy: 89.2% ROC-AUC: 0.91 Precision(Yes): 0.58, Recall(Yes): 0.52
 
-4️⃣ Model Evaluation
-Metric	Score
-Test Accuracy	89.2%
-ROC–AUC	0.91
-Precision (Yes)	0.58
-Recall (Yes)	0.52
-5️⃣ Visualization Suite
-Visualization	Purpose
-Target Distribution	Class imbalance analysis
-Age & Job Distribution	Demographic insights
-Duration & Campaign Boxplots	Outlier detection
-Feature Importance	Key predictors
-Confusion Matrix	Model accuracy evaluation
-Correlation Heatmap	Feature relationships
-Decision Tree Structure	Model interpretability
-🔍 Key Findings
-📈 Overall Statistics
-Category	Count	Percentage
-Total Clients	45,211	100%
-Purchased	5,285	11.7%
-Not Purchased	39,926	88.3%
-Test Accuracy	—	89.2%
-🎯 Critical Purchase Factors (Feature Importance)
+###5. Visualization Suite (8 Charts) Target distribution, age/job distributions Duration/campaign boxplots, feature importance Confusion matrix, correlation heatmap Decision tree structure
+
+🔍 Key Findings 📈 Overall Statistics Total Clients: 45,211 Purchased: 5,285 (11.7%) Not Purchased: 39,926 (88.3%) Test Accuracy: 89.2%
+
+🎯 Critical Purchase Factors (Ranked by Feature Importance)
+
 Rank	Feature	Importance	Business Insight
-1	pdays	0.42	Recency of last contact matters
+1	pdays	0.42	Days since last contact - recency matters
 2	duration	0.28	Longer calls → higher conversion
-3	age	0.09	30–50 age group most responsive
+3	age	0.09	30-50 age group most responsive
 4	poutcome	0.07	Previous campaign success predictor
-5	campaign	0.05	1–3 contacts optimal
-🚀 How to Replicate
-Prerequisites
-pip install pandas numpy scikit-learn matplotlib seaborn ucimlrepo jupyter joblib
+5	campaign	0.05	1-3 contacts optimal
+🚀 How to Replicate Prerequisites bash
 
+pip install pandas==2.0.3 numpy==1.24.3 scikit-learn==1.3.0 matplotlib==3.7.2 seaborn==0.12.2 ucimlrepo==0.0.4 jupyter==1.0.0 joblib==1.3.0
 Quick Start
-# 1. Clone Repository
-git clone https://github.com/YOUR_USERNAME/PRODIGY_DS_03.git
+bash
+# 1. Clone repository
+gitclone https://github.com/YOUR_USERNAME/PRODIGY_DS_03.git
 cd PRODIGY_DS_03
 
-# 2. Launch Jupyter Notebook
+##2. Launch Jupyter
 jupyter notebook
 
-# 3. Open Notebook and Run All Cells
+#$ 3. Open notebook & run all cells
 Bank_Marketing_Decision_Tree.ipynb
-
-📁 Project Structure
-PRODIGY_DS_03/
-│
-├── Bank_Marketing_Decision_Tree.ipynb
-├── dataset.csv
-├── model.pkl
-├── README.md
-└── images/
-
-📌 Future Improvements
-Enhancement	Benefit
-SMOTE	Handle class imbalance
-Random Forest	Higher accuracy
-XGBoost	Better generalization
-Hyperparameter Tuning	Optimize performance
-Feature Scaling	Improve stability
-👨‍💻 Author
-
-Your Name
-
-⭐ Repository Stats
-
-Stars: 0
-
-Forks: 0
-
-Watchers: 0
-
-📜 License
-
-This project is open-source and available under the MIT License.
-
-This version is clean, recruiter-friendly, and GitHub professio
