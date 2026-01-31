@@ -58,6 +58,6 @@ The project includes **EDA, Data Preprocessing, Model Training, and Evaluation**
 ## ▶️ How to Run
 ```bash
 pip install pandas numpy scikit-learn matplotlib seaborn jupyter
-git clone https://github.com/YOUR_USERNAME/PRODIGY_DS_03.git
+git clonehttps://github.com/omtecno/PRODIGY_DS03/tree/main
 cd PRODIGY_DS_03
-jupyter notebook
+jupyter notebook PRODIGY_03.ipynb
